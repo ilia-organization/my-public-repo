@@ -1,0 +1,12 @@
+rules:
+- id: do-not-use-class
+  patterns:
+    - pattern-inside: |
+        using Some.Namespace.;
+        ...
+    - pattern-regex: IDontUseMe .*\)
+  message: |
+    Do not use IDontUseMe explictly in class. Use something else instead
+  languages:
+    - csharp
+  severity: INFO
