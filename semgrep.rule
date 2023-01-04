@@ -2,7 +2,7 @@ rules:
 - id: do-not-use-class
   patterns:
     - pattern-inside: |
-        using Some.Namespace.;
+        using Some.Namespace.Something;
         ...
     - pattern-regex: IDontUseMe .*\)
   message: |
