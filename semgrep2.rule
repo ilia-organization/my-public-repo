@@ -1,0 +1,9 @@
+rules:
+- id: detect-await-task-delay
+  patterns:
+    - pattern: await Task.Delay($DURATION)
+  message: | 
+    Avoid using 'await Task.Delay' directly in test code as it leads to flaky tests. Consider using a more reliable approach for waiting or scheduling tasks.
+  languages:
+    - csharp
+  severity: INFO
